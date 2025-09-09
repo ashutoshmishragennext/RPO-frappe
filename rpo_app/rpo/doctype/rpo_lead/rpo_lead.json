@@ -1,0 +1,208 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:LEAD-{DD}-{MM}-{YY}-{####}",
+ "creation": "2025-09-08 17:07:34.958436",
+ "custom": 1,
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_7qj3",
+  "amended_from",
+  "company_name",
+  "contact_person_name",
+  "email_id",
+  "website",
+  "expected_hiring_volume",
+  "timeline",
+  "services_required",
+  "column_break_xhff",
+  "industry_type",
+  "designation",
+  "phone_number",
+  "lead_source",
+  "lead_status",
+  "budget_range",
+  "assigned_to",
+  "priority_level",
+  "next_follow_up",
+  "section_break_auou",
+  "address_details",
+  "lead_notes",
+  "section_break_zbzs",
+  "created_date",
+  "column_break_oqke",
+  "modified_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_7qj3",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "RPO Lead",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "company_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Company Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "contact_person_name",
+   "fieldtype": "Data",
+   "label": " Contact Person Name"
+  },
+  {
+   "fieldname": "email_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": " Email ID",
+   "reqd": 1
+  },
+  {
+   "fieldname": "website",
+   "fieldtype": "Data",
+   "label": " Website"
+  },
+  {
+   "fieldname": "expected_hiring_volume",
+   "fieldtype": "Int",
+   "label": " Expected Hiring Volume"
+  },
+  {
+   "fieldname": "timeline",
+   "fieldtype": "Date",
+   "label": " Timeline"
+  },
+  {
+   "fieldname": "services_required",
+   "fieldtype": "Select",
+   "label": "Services Required ",
+   "options": "Permanent Staffing\nContract Staffing\nExecutive Search"
+  },
+  {
+   "fieldname": "column_break_xhff",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "industry_type",
+   "fieldtype": "Select",
+   "label": "Industry Type",
+   "options": "IT\nHealthCare\nFinance\nManufacturing"
+  },
+  {
+   "fieldname": "designation",
+   "fieldtype": "Data",
+   "label": "Designation"
+  },
+  {
+   "fieldname": "phone_number",
+   "fieldtype": "Phone",
+   "label": " Phone Number"
+  },
+  {
+   "fieldname": "lead_source",
+   "fieldtype": "Select",
+   "label": "Lead Source ",
+   "options": "Website\nReferral\nCold Call\nLinkedIn"
+  },
+  {
+   "fieldname": "lead_status",
+   "fieldtype": "Select",
+   "label": "Lead Status",
+   "options": "New\nContacted\nQualified\nUnqualified\nConverted"
+  },
+  {
+   "fieldname": "budget_range",
+   "fieldtype": "Currency",
+   "label": " Budget Range"
+  },
+  {
+   "fieldname": "assigned_to",
+   "fieldtype": "Link",
+   "label": "Assigned To",
+   "options": "User"
+  },
+  {
+   "fieldname": "priority_level",
+   "fieldtype": "Select",
+   "label": "Priority Level",
+   "options": "Low\nMedium\nHigh"
+  },
+  {
+   "fieldname": "next_follow_up",
+   "fieldtype": "Date",
+   "label": "Next Follow up"
+  },
+  {
+   "fieldname": "section_break_auou",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "address_details",
+   "fieldtype": "Small Text",
+   "label": " Address Details"
+  },
+  {
+   "fieldname": "lead_notes",
+   "fieldtype": "Text Editor",
+   "label": "Lead Notes"
+  },
+  {
+   "fieldname": "section_break_zbzs",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "created_date",
+   "fieldtype": "Date",
+   "label": "Created Date"
+  },
+  {
+   "fieldname": "column_break_oqke",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "modified_date",
+   "fieldtype": "Date",
+   "label": " Modified Date"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-09-09 09:56:01.855717",
+ "modified_by": "verma.adii03@gmail.com",
+ "module": "RPO",
+ "name": "RPO Lead",
+ "naming_rule": "Expression",
+ "owner": "verma.adii03@gmail.com",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

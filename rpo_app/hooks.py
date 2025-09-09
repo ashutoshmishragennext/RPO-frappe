@@ -5,12 +5,14 @@ app_description = "Recruitment Recruitment Process Outsourcing"
 app_email = "atul.raj@gennextit.com"
 app_license = "mit"
 
+
 # Apps
 # ------------------
 
 # required_apps = []
 
 # Each item in the list will be shown as an app in the apps page
+fixtures = ["RPO Lead"]
 # add_to_apps_screen = [
 # 	{
 # 		"name": "rpo_app",

@@ -1,0 +1,77 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-09-09 12:34:47.249722",
+ "custom": 1,
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "company_details",
+  "desgination",
+  "start_date",
+  "end_date",
+  "current_company",
+  "notice_period_if_current",
+  "reason_for_change"
+ ],
+ "fields": [
+  {
+   "fieldname": "company_details",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Company Details "
+  },
+  {
+   "fieldname": "desgination",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Desgination"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": " Start Date"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "End Date"
+  },
+  {
+   "default": "0",
+   "fieldname": "current_company",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Current Company "
+  },
+  {
+   "fieldname": "notice_period_if_current",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": " Notice Period (if current)"
+  },
+  {
+   "fieldname": "reason_for_change",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": " Reason for Change"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-09-09 12:42:17.542956",
+ "modified_by": "verma.adii03@gmail.com",
+ "module": "RPO",
+ "name": "Experiences",
+ "owner": "verma.adii03@gmail.com",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

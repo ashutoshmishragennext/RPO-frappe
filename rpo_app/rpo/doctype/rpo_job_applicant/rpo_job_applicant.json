@@ -1,0 +1,234 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-09-09 12:28:25.096177",
+ "custom": 1,
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "personal_information_tab",
+  "section_break_ijh3",
+  "amended_from",
+  "candidate_name",
+  "phone_number",
+  "date_of_birth",
+  "gender",
+  "marital_status",
+  "location",
+  "preferred_location",
+  "nationality",
+  "permanent_address",
+  "current_address",
+  "column_break_juqg",
+  "email_id",
+  "alternate_phone",
+  "column_break_smcf",
+  "professional_information_tab",
+  "experiences_section",
+  "previous_experiences",
+  "education_section",
+  "eduction",
+  "status_tracking_tab",
+  "status_tracking",
+  "registration_date",
+  "candidate_status",
+  "availability",
+  "recruiter_assigned",
+  "internal_rating",
+  "commentsnotes"
+ ],
+ "fields": [
+  {
+   "fieldname": "personal_information_tab",
+   "fieldtype": "Tab Break",
+   "label": "Personal Information"
+  },
+  {
+   "fieldname": "section_break_ijh3",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "RPO Job Applicant",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "candidate_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": " Candidate Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "phone_number",
+   "fieldtype": "Phone",
+   "label": "Phone Number"
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": " Date of Birth"
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "label": "Gender ",
+   "options": "Male\nFemale\nTrans"
+  },
+  {
+   "fieldname": "marital_status",
+   "fieldtype": "Data",
+   "label": "Marital Status"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Data",
+   "label": "Location"
+  },
+  {
+   "fieldname": "preferred_location",
+   "fieldtype": "Data",
+   "label": " Preferred Location"
+  },
+  {
+   "fieldname": "nationality",
+   "fieldtype": "Data",
+   "label": " Nationality"
+  },
+  {
+   "fieldname": "permanent_address",
+   "fieldtype": "Data",
+   "label": " Permanent Address"
+  },
+  {
+   "fieldname": "current_address",
+   "fieldtype": "Data",
+   "label": " Current Address"
+  },
+  {
+   "fieldname": "column_break_juqg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "email_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Email ID",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "alternate_phone",
+   "fieldtype": "Phone",
+   "label": " Alternate Phone"
+  },
+  {
+   "fieldname": "column_break_smcf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "professional_information_tab",
+   "fieldtype": "Tab Break",
+   "label": " Professional Information"
+  },
+  {
+   "fieldname": "experiences_section",
+   "fieldtype": "Section Break",
+   "label": "Experiences"
+  },
+  {
+   "fieldname": "previous_experiences",
+   "fieldtype": "Table",
+   "label": "Previous Experiences",
+   "options": "Experiences"
+  },
+  {
+   "fieldname": "education_section",
+   "fieldtype": "Section Break",
+   "label": "Education"
+  },
+  {
+   "fieldname": "eduction",
+   "fieldtype": "Table",
+   "label": "Eduction",
+   "options": "Education"
+  },
+  {
+   "fieldname": "status_tracking_tab",
+   "fieldtype": "Tab Break",
+   "label": "Status Tracking"
+  },
+  {
+   "fieldname": "status_tracking",
+   "fieldtype": "Select",
+   "label": "Status Tracking",
+   "options": "Job Portal\nReferral\nDirect\nWalk-in"
+  },
+  {
+   "fieldname": "registration_date",
+   "fieldtype": "Date",
+   "label": "Registration Date"
+  },
+  {
+   "fieldname": "candidate_status",
+   "fieldtype": "Select",
+   "label": " Candidate Status",
+   "options": "New\nScreening\nInterview\nSelected\nRejected\nOffered\nJoined\nDropped"
+  },
+  {
+   "fieldname": "availability",
+   "fieldtype": "Select",
+   "label": "Availability",
+   "options": "Immediate\nServing Notice\nNot Available"
+  },
+  {
+   "fieldname": "recruiter_assigned",
+   "fieldtype": "Link",
+   "label": "Recruiter Assigned ",
+   "options": "User"
+  },
+  {
+   "fieldname": "internal_rating",
+   "fieldtype": "Rating",
+   "label": " Internal Rating "
+  },
+  {
+   "fieldname": "commentsnotes",
+   "fieldtype": "Text Editor",
+   "label": " Comments/Notes"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-09-09 12:58:05.982127",
+ "modified_by": "verma.adii03@gmail.com",
+ "module": "RPO",
+ "name": "RPO Job Applicant",
+ "owner": "verma.adii03@gmail.com",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

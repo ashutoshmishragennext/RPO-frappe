@@ -1,0 +1,236 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:JOB-{DD}-{MM}-{YY}#{####}",
+ "creation": "2025-09-09 11:13:44.826530",
+ "custom": 1,
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_0fdr",
+  "amended_from",
+  "job_title",
+  "department",
+  "experience_level",
+  "location",
+  "minimum_experience",
+  "key_skills_required",
+  "number_of_positions",
+  "priority",
+  "job_category",
+  "budget_approved",
+  "column_break_cdyf",
+  "job_idreference_number",
+  "job_type",
+  "work_mode",
+  "salary_range",
+  "maximum_experience",
+  "qualifications_required",
+  "job_status",
+  "posting_date",
+  "notice_period_acceptable",
+  "section_break_yqdf",
+  "job_description",
+  "section_break_qata",
+  "assigned_recruiter",
+  "expected_closure_date",
+  "column_break_ivba",
+  "client_contact_person",
+  "section_break_hwtg",
+  "internal_notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_0fdr",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "RPO Job Opening",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "job_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Job Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Data",
+   "label": " Department"
+  },
+  {
+   "fieldname": "experience_level",
+   "fieldtype": "Select",
+   "label": " Experience Level ",
+   "options": "Entry\nMid\nSenior\nExecutive"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Data",
+   "label": "Location"
+  },
+  {
+   "fieldname": "minimum_experience",
+   "fieldtype": "Float",
+   "label": "Minimum Experience"
+  },
+  {
+   "fieldname": "key_skills_required",
+   "fieldtype": "Data",
+   "label": "Key Skills Required "
+  },
+  {
+   "fieldname": "number_of_positions",
+   "fieldtype": "Int",
+   "label": " Number of Positions"
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "label": "Priority",
+   "options": "Low\nMedium\nHigh"
+  },
+  {
+   "fieldname": "job_category",
+   "fieldtype": "Select",
+   "label": " Job Category"
+  },
+  {
+   "default": "0",
+   "fieldname": "budget_approved",
+   "fieldtype": "Check",
+   "label": "Budget Approved "
+  },
+  {
+   "fieldname": "column_break_cdyf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "job_idreference_number",
+   "fieldtype": "Data",
+   "label": "Job ID/Reference Number "
+  },
+  {
+   "fieldname": "job_type",
+   "fieldtype": "Select",
+   "label": "Job Type",
+   "options": "Permanent\nContract\nTemporary"
+  },
+  {
+   "fieldname": "work_mode",
+   "fieldtype": "Select",
+   "label": "Work Mode",
+   "options": "On-Site\nRemote\nHybrid"
+  },
+  {
+   "fieldname": "salary_range",
+   "fieldtype": "Currency",
+   "label": " Salary Range"
+  },
+  {
+   "fieldname": "maximum_experience",
+   "fieldtype": "Float",
+   "label": "Maximum Experience "
+  },
+  {
+   "fieldname": "qualifications_required",
+   "fieldtype": "Data",
+   "label": "Qualifications Required"
+  },
+  {
+   "fieldname": "job_status",
+   "fieldtype": "Select",
+   "label": "Job Status",
+   "options": "Open\nOn Hold\nClosed\nCancelled"
+  },
+  {
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Posting Date"
+  },
+  {
+   "fieldname": "notice_period_acceptable",
+   "fieldtype": "Int",
+   "label": " Notice Period Acceptable"
+  },
+  {
+   "fieldname": "section_break_yqdf",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "job_description",
+   "fieldtype": "Text Editor",
+   "label": "Job Description"
+  },
+  {
+   "fieldname": "section_break_qata",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "assigned_recruiter",
+   "fieldtype": "Link",
+   "label": "Assigned Recruiter ",
+   "options": "User"
+  },
+  {
+   "fieldname": "expected_closure_date",
+   "fieldtype": "Date",
+   "label": "Expected Closure Date"
+  },
+  {
+   "fieldname": "column_break_ivba",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "client_contact_person",
+   "fieldtype": "Date",
+   "label": "Client Contact Person"
+  },
+  {
+   "fieldname": "section_break_hwtg",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "internal_notes",
+   "fieldtype": "Text Editor",
+   "label": "Internal Notes"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-09-09 12:01:42.326772",
+ "modified_by": "verma.adii03@gmail.com",
+ "module": "RPO",
+ "name": "RPO Job Opening",
+ "naming_rule": "Expression",
+ "owner": "verma.adii03@gmail.com",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

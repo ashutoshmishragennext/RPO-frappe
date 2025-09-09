@@ -1,0 +1,85 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:TEST-{####}",
+ "creation": "2025-09-09 14:39:12.453464",
+ "custom": 1,
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_bggs",
+  "amended_from",
+  "assessment_id",
+  "candidate",
+  "job_application",
+  "assessment_type"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_bggs",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Candidate Assessment",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "assessment_id",
+   "fieldtype": "Data",
+   "label": "Assessment ID"
+  },
+  {
+   "fieldname": "candidate",
+   "fieldtype": "Link",
+   "label": "Candidate",
+   "options": "RPO Job Applicant"
+  },
+  {
+   "fieldname": "job_application",
+   "fieldtype": "Link",
+   "label": "Job Application",
+   "options": "RPO Job Application"
+  },
+  {
+   "fieldname": "assessment_type",
+   "fieldtype": "Select",
+   "label": "Assessment Type",
+   "options": "Technical Test\nAptitude Test\nCoding Test\nCase Study\nAssignment"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-09-09 14:54:01.733184",
+ "modified_by": "verma.adii03@gmail.com",
+ "module": "RPO",
+ "name": "Candidate Assessment",
+ "naming_rule": "Expression",
+ "owner": "verma.adii03@gmail.com",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

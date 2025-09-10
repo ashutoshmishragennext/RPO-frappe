@@ -9,8 +9,21 @@
  "engine": "InnoDB",
  "field_order": [
   "opportunity_name",
-  "amended_from",
-  "opportunity_type"
+  "client",
+  "opportunity_type",
+  "stage",
+  "probability",
+  "expected_closing_date",
+  "deal_value",
+  "services_required",
+  "territory",
+  "sales_person",
+  "competitors",
+  "key_requirements",
+  "proposal_status",
+  "contract_terms",
+  "lost_reason",
+  "amended_from"
  ],
  "fields": [
   {
@@ -21,11 +34,11 @@
    "reqd": 1
   },
   {
-   "fieldname": "amended_from",
+   "fieldname": "client",
    "fieldtype": "Link",
-   "label": "Lead",
+   "label": "Client",
    "no_copy": 1,
-   "options": "Lead",
+   "options": "Client",
    "print_hide": 1,
    "read_only": 1,
    "search_index": 1
@@ -34,15 +47,89 @@
    "fieldname": "opportunity_type",
    "fieldtype": "Select",
    "label": "Opportunity Type",
-   "options": "New Business,Existing Client, Upsell"
+   "options": "New Business\nExisting Client\nUpsell"
+  },
+  {
+   "fieldname": "stage",
+   "fieldtype": "Select",
+   "label": "Stage",
+   "options": "Prospecting\nProposal\nNegotiation\nClosed Won\nClosed Lost"
+  },
+  {
+   "fieldname": "probability",
+   "fieldtype": "Percent",
+   "label": "Probability"
+  },
+  {
+   "fieldname": "expected_closing_date",
+   "fieldtype": "Date",
+   "label": " Expected Closing Date"
+  },
+  {
+   "fieldname": "deal_value",
+   "fieldtype": "Currency",
+   "label": " Deal Value"
+  },
+  {
+   "fieldname": "services_required",
+   "fieldtype": "Select",
+   "label": " Services Required",
+   "options": "Table with Service Type\nQuantity\nRate"
+  },
+  {
+   "fieldname": "territory",
+   "fieldtype": "Data",
+   "label": " Territory"
+  },
+  {
+   "fieldname": "sales_person",
+   "fieldtype": "Link",
+   "label": "Sales Person ",
+   "options": "User"
+  },
+  {
+   "fieldname": "competitors",
+   "fieldtype": "Data",
+   "label": "Competitors"
+  },
+  {
+   "fieldname": "key_requirements",
+   "fieldtype": "Data",
+   "label": "Key Requirements"
+  },
+  {
+   "fieldname": "proposal_status",
+   "fieldtype": "Data",
+   "label": " Proposal Status"
+  },
+  {
+   "fieldname": "contract_terms",
+   "fieldtype": "Data",
+   "label": "Contract Terms"
+  },
+  {
+   "fieldname": "lost_reason",
+   "fieldtype": "Data",
+   "label": "Lost Reason",
+   "placeholder": "If Applicable"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Opportunity Tracking",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-09-09 12:54:12.074763",
- "modified_by": "ashutoshmishra8796@gmail.com",
+ "modified": "2025-09-10 15:42:15.351270",
+ "modified_by": "verma.adii03@gmail.com",
  "module": "RPO",
  "name": "Opportunity Tracking",
  "owner": "ashutoshmishra8796@gmail.com",

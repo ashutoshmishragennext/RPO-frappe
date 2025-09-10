@@ -16,7 +16,7 @@ fixtures = [
    
     {
         "dt": "Client Script",
-        "filters": [["module", "=", "Eits App"]]
+        "filters": [["module", "=", "RPO"]]
     },
      
     "Server Script"

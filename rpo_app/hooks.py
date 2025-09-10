@@ -12,7 +12,15 @@ app_license = "mit"
 # required_apps = []
 
 # Each item in the list will be shown as an app in the apps page
-fixtures = ["RPO Lead"]
+fixtures = [
+   
+    {
+        "dt": "Client Script",
+        "filters": [["module", "=", "Eits App"]]
+    },
+     
+    "Server Script"
+]
 # add_to_apps_screen = [
 # 	{
 # 		"name": "rpo_app",

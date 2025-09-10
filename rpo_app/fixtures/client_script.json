@@ -1,1 +1,24 @@
-[]
+[
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Client",
+  "enabled": 1,
+  "modified": "2025-09-10 15:39:08.638408",
+  "module": "RPO",
+  "name": "Auto selected countr code",
+  "script": "frappe.ui.form.on('Client', {\n\trefresh(frm) {\n            if(!frm.doc.created_date){\n                frm.set_value('created_date', frappe.datetime.get_today());\n            \n        }\n\n\t}\n})",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Opportunity Tracking",
+  "enabled": 1,
+  "modified": "2025-09-10 16:39:43.054471",
+  "module": "RPO",
+  "name": "Convert Opportunity to job type",
+  "script": "frappe.ui.form.on('Opportunity Tracking', {\r\n    refresh: function(frm) {\r\n        if (!frm.is_new()) {\r\n            frm.add_custom_button(__('Create Job Opening'), function() {\r\n                frappe.new_doc('RPO Job Opening', {\r\n                opportunity: frm.doc.name  // or use frm.doc.name if that's the Lead ID\r\n                });\r\n            });\r\n        }\r\n    }\r\n});",
+  "view": "Form"
+ }
+]

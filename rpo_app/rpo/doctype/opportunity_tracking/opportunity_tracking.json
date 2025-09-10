@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:OPP-{YYYY}-{MM}-{DD}-{####}",
  "creation": "2025-09-09 12:47:06.285159",
  "custom": 1,
  "default_view": "List",
@@ -37,11 +38,7 @@
    "fieldname": "client",
    "fieldtype": "Link",
    "label": "Client",
-   "no_copy": 1,
-   "options": "Client",
-   "print_hide": 1,
-   "read_only": 1,
-   "search_index": 1
+   "options": "Client"
   },
   {
    "fieldname": "opportunity_type",
@@ -61,6 +58,7 @@
    "label": "Probability"
   },
   {
+   "fetch_from": "client.timeline",
    "fieldname": "expected_closing_date",
    "fieldtype": "Date",
    "label": " Expected Closing Date"
@@ -82,6 +80,7 @@
    "label": " Territory"
   },
   {
+   "fetch_from": "client.assigned_to",
    "fieldname": "sales_person",
    "fieldtype": "Link",
    "label": "Sales Person ",
@@ -128,10 +127,11 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-09-10 15:42:15.351270",
- "modified_by": "verma.adii03@gmail.com",
+ "modified": "2025-09-10 16:40:20.839542",
+ "modified_by": "ashutoshmishra8796@gmail.com",
  "module": "RPO",
  "name": "Opportunity Tracking",
+ "naming_rule": "Expression",
  "owner": "ashutoshmishra8796@gmail.com",
  "permissions": [
   {

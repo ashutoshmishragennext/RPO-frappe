@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:AP-{YYYY}-{MM}-{DD}-{####}",
  "creation": "2025-09-09 12:28:25.096177",
  "custom": 1,
  "doctype": "DocType",
@@ -22,6 +23,8 @@
   "column_break_juqg",
   "email_id",
   "alternate_phone",
+  "job_id",
+  "application_source",
   "column_break_smcf",
   "professional_information_tab",
   "experiences_section",
@@ -128,6 +131,18 @@
    "label": " Alternate Phone"
   },
   {
+   "fieldname": "job_id",
+   "fieldtype": "Link",
+   "label": "Job Id",
+   "options": "RPO Job Opening",
+   "reqd": 1
+  },
+  {
+   "fieldname": "application_source",
+   "fieldtype": "Data",
+   "label": "Application Source "
+  },
+  {
    "fieldname": "column_break_smcf",
    "fieldtype": "Column Break"
   },
@@ -207,10 +222,11 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-09-09 12:58:05.982127",
- "modified_by": "verma.adii03@gmail.com",
+ "modified": "2025-09-10 16:52:32.058011",
+ "modified_by": "ashutoshmishra8796@gmail.com",
  "module": "RPO",
  "name": "RPO Job Applicant",
+ "naming_rule": "Expression",
  "owner": "verma.adii03@gmail.com",
  "permissions": [
   {

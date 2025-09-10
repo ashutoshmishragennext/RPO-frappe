@@ -11,8 +11,25 @@
   "amended_from",
   "assessment_id",
   "candidate",
+  "assessment_type",
+  "assessment_mode",
+  "total_marks",
+  "percentage",
+  "test_platform_used",
+  "column_break_bjzm",
   "job_application",
-  "assessment_type"
+  "assessment_date",
+  "test_duration",
+  "obtained_marks",
+  "status",
+  "test_linkdetails",
+  "section_break_gtjo",
+  "evaluator",
+  "detailed_feedback",
+  "column_break_ywxo",
+  "evaluation_date",
+  "test_results_attachment",
+  "next_step"
  ],
  "fields": [
   {
@@ -32,7 +49,8 @@
   {
    "fieldname": "assessment_id",
    "fieldtype": "Data",
-   "label": "Assessment ID"
+   "label": "Assessment ID",
+   "read_only": 1
   },
   {
    "fieldname": "candidate",
@@ -41,23 +59,109 @@
    "options": "RPO Job Applicant"
   },
   {
+   "fieldname": "assessment_type",
+   "fieldtype": "Select",
+   "label": "Assessment Type",
+   "options": "Technical Test\nAptitude Test\nCoding Test\nCase Study\nAssignment"
+  },
+  {
+   "fieldname": "assessment_mode",
+   "fieldtype": "Select",
+   "label": "Assessment Mode",
+   "options": "Online\nOffline\nAt Home"
+  },
+  {
+   "fieldname": "total_marks",
+   "fieldtype": "Percent",
+   "label": "Total Marks"
+  },
+  {
+   "fieldname": "percentage",
+   "fieldtype": "Percent",
+   "label": " Percentage"
+  },
+  {
+   "fieldname": "test_platform_used",
+   "fieldtype": "Data",
+   "label": " Test Platform Used"
+  },
+  {
+   "fieldname": "column_break_bjzm",
+   "fieldtype": "Column Break"
+  },
+  {
    "fieldname": "job_application",
    "fieldtype": "Link",
    "label": "Job Application",
    "options": "RPO Job Application"
   },
   {
-   "fieldname": "assessment_type",
+   "fieldname": "assessment_date",
+   "fieldtype": "Date",
+   "label": " Assessment Date"
+  },
+  {
+   "fieldname": "test_duration",
+   "fieldtype": "Duration",
+   "label": "Test Duration"
+  },
+  {
+   "fieldname": "obtained_marks",
+   "fieldtype": "Float",
+   "label": " Obtained Marks"
+  },
+  {
+   "fieldname": "status",
    "fieldtype": "Select",
-   "label": "Assessment Type",
-   "options": "Technical Test\nAptitude Test\nCoding Test\nCase Study\nAssignment"
+   "label": "Status",
+   "options": "Pass\nFail"
+  },
+  {
+   "fieldname": "test_linkdetails",
+   "fieldtype": "Data",
+   "label": " Test Link/Details"
+  },
+  {
+   "fieldname": "section_break_gtjo",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "evaluator",
+   "fieldtype": "Link",
+   "label": "Evaluator",
+   "options": "User"
+  },
+  {
+   "fieldname": "detailed_feedback",
+   "fieldtype": "Text Editor",
+   "label": "Detailed Feedback"
+  },
+  {
+   "fieldname": "column_break_ywxo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "evaluation_date",
+   "fieldtype": "Date",
+   "label": " Evaluation Date"
+  },
+  {
+   "fieldname": "test_results_attachment",
+   "fieldtype": "Attach Image",
+   "label": " Test Results Attachment"
+  },
+  {
+   "fieldname": "next_step",
+   "fieldtype": "Select",
+   "label": "Next Step",
+   "options": "Proceed to Interview\nRejected\nRe-test"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-09-09 14:54:01.733184",
+ "modified": "2025-09-09 15:47:11.295193",
  "modified_by": "verma.adii03@gmail.com",
  "module": "RPO",
  "name": "Candidate Assessment",

@@ -1,0 +1,132 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-09-10 11:22:50.170648",
+ "custom": 1,
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_npvm",
+  "amended_from",
+  "client",
+  "service_type",
+  "fee_type",
+  "fee_percentage",
+  "fixed_fee_amount",
+  "hourly_rate",
+  "currency",
+  "payment_terms",
+  "guarantee_period",
+  "replacement_terms",
+  "effective_from_date",
+  "valid_until_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_npvm",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Fee Structure",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "client",
+   "fieldtype": "Link",
+   "label": "Client",
+   "options": "User"
+  },
+  {
+   "fieldname": "service_type",
+   "fieldtype": "Select",
+   "label": " Service Type ",
+   "options": "Permanent Placement\nContract Staffing\nExecutive Search"
+  },
+  {
+   "fieldname": "fee_type",
+   "fieldtype": "Select",
+   "label": " Fee Type ",
+   "options": "Percentage of CTC\nFixed Fee\nHourly Rate"
+  },
+  {
+   "fieldname": "fee_percentage",
+   "fieldtype": "Percent",
+   "label": " Fee Percentage"
+  },
+  {
+   "fieldname": "fixed_fee_amount",
+   "fieldtype": "Int",
+   "label": "Fixed Fee Amount "
+  },
+  {
+   "fieldname": "hourly_rate",
+   "fieldtype": "Int",
+   "label": " Hourly Rate"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Currency",
+   "label": " Currency"
+  },
+  {
+   "fieldname": "payment_terms",
+   "fieldtype": "Select",
+   "label": " Payment Terms",
+   "options": "On Joining\n30 Days\n60 Days\n90 Days"
+  },
+  {
+   "fieldname": "guarantee_period",
+   "fieldtype": "Int",
+   "label": "Guarantee Period"
+  },
+  {
+   "fieldname": "replacement_terms",
+   "fieldtype": "Data",
+   "label": " Replacement Terms"
+  },
+  {
+   "fieldname": "effective_from_date",
+   "fieldtype": "Date",
+   "label": " Effective From Date"
+  },
+  {
+   "fieldname": "valid_until_date",
+   "fieldtype": "Date",
+   "label": " Valid Until Date"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-09-10 11:29:26.786757",
+ "modified_by": "verma.adii03@gmail.com",
+ "module": "RPO",
+ "name": "Fee Structure",
+ "owner": "verma.adii03@gmail.com",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

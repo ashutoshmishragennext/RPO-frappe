@@ -1,0 +1,271 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-09-09 15:48:29.266192",
+ "custom": 1,
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_wdik",
+  "amended_from",
+  "interview_id",
+  "candidate",
+  "job_application",
+  "interview_type",
+  "interview_date_and_time",
+  "duration",
+  "interview_mode",
+  "meeting_linklocation",
+  "interview_status",
+  "interviewers_detail_tab",
+  "interviewers",
+  "interview_evaluation_tab",
+  "technical_skills_rating",
+  "column_break_ggfg",
+  "communication_skills_rating",
+  "column_break_iujz",
+  "cultural_fit_rating",
+  "column_break_cvai",
+  "overall_rating",
+  "section_break_zkcp",
+  "recommendation",
+  "detailed_feedback",
+  "strengths",
+  "areas_of_improvement",
+  "salary_discussion_details",
+  "availability_discussion",
+  "next_steps",
+  "follow_up_actions_tab",
+  "next_interview_roundif_applicable",
+  "column_break_ilht",
+  "client_feedback_pending",
+  "column_break_tamy",
+  "offer_processing",
+  "column_break_pgka",
+  "rejection_processing"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_wdik",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Interview",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "default": "INTID",
+   "fieldname": "interview_id",
+   "fieldtype": "Data",
+   "label": "Interview ID "
+  },
+  {
+   "fieldname": "candidate",
+   "fieldtype": "Link",
+   "label": "Candidate",
+   "options": "RPO Job Applicant"
+  },
+  {
+   "fieldname": "job_application",
+   "fieldtype": "Link",
+   "label": "Job Application",
+   "options": "RPO Job Applicant"
+  },
+  {
+   "fieldname": "interview_type",
+   "fieldtype": "Select",
+   "label": "Interview Type",
+   "options": "Telephonic\nFace-to-face\nVideo call\nPanel"
+  },
+  {
+   "fieldname": "interview_date_and_time",
+   "fieldtype": "Datetime",
+   "label": "Interview Date and Time",
+   "placeholder": "Please Enter Date and time for Interview"
+  },
+  {
+   "fieldname": "duration",
+   "fieldtype": "Duration",
+   "label": "Duration"
+  },
+  {
+   "fieldname": "interview_mode",
+   "fieldtype": "Select",
+   "label": "Interview Mode",
+   "options": "Online\nOn-site\nClient Location"
+  },
+  {
+   "fieldname": "meeting_linklocation",
+   "fieldtype": "Data",
+   "label": "Meeting Link/Location"
+  },
+  {
+   "fieldname": "interview_status",
+   "fieldtype": "Select",
+   "label": "Interview Status",
+   "options": "Scheduled\nCompleted\nCancelled\nRescheduled\nNo Show"
+  },
+  {
+   "fieldname": "interviewers_detail_tab",
+   "fieldtype": "Tab Break",
+   "label": "Interviewer's Detail"
+  },
+  {
+   "fieldname": "interviewers",
+   "fieldtype": "Table",
+   "label": "Interviewers",
+   "options": "Interviewer"
+  },
+  {
+   "fieldname": "interview_evaluation_tab",
+   "fieldtype": "Tab Break",
+   "label": "Interview Evaluation"
+  },
+  {
+   "fieldname": "technical_skills_rating",
+   "fieldtype": "Rating",
+   "label": " Technical Skills Rating"
+  },
+  {
+   "fieldname": "column_break_ggfg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "communication_skills_rating",
+   "fieldtype": "Rating",
+   "label": "Communication Skills Rating "
+  },
+  {
+   "fieldname": "column_break_iujz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cultural_fit_rating",
+   "fieldtype": "Rating",
+   "label": " Cultural Fit Rating "
+  },
+  {
+   "fieldname": "column_break_cvai",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "overall_rating",
+   "fieldtype": "Rating",
+   "label": "Overall Rating"
+  },
+  {
+   "fieldname": "section_break_zkcp",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "recommendation",
+   "fieldtype": "Select",
+   "label": " Recommendation",
+   "options": "Strong Hire\nHire\nHold\nNo Hire"
+  },
+  {
+   "fieldname": "detailed_feedback",
+   "fieldtype": "Text Editor",
+   "label": "Detailed Feedback"
+  },
+  {
+   "fieldname": "strengths",
+   "fieldtype": "Data",
+   "label": "Strengths"
+  },
+  {
+   "fieldname": "areas_of_improvement",
+   "fieldtype": "Data",
+   "label": "Areas of Improvement"
+  },
+  {
+   "fieldname": "salary_discussion_details",
+   "fieldtype": "Data",
+   "label": " Salary Discussion Details"
+  },
+  {
+   "fieldname": "availability_discussion",
+   "fieldtype": "Data",
+   "label": "Availability Discussion"
+  },
+  {
+   "fieldname": "next_steps",
+   "fieldtype": "Data",
+   "label": " Next Steps"
+  },
+  {
+   "fieldname": "follow_up_actions_tab",
+   "fieldtype": "Tab Break",
+   "label": "Follow up Actions"
+  },
+  {
+   "fieldname": "next_interview_roundif_applicable",
+   "fieldtype": "Datetime",
+   "label": "Next Interview Round(if applicable)"
+  },
+  {
+   "fieldname": "column_break_ilht",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "client_feedback_pending",
+   "fieldtype": "Check",
+   "label": "Client Feedback Pending"
+  },
+  {
+   "fieldname": "column_break_tamy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "offer_processing",
+   "fieldtype": "Check",
+   "label": "Offer Processing"
+  },
+  {
+   "fieldname": "column_break_pgka",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "rejection_processing",
+   "fieldtype": "Check",
+   "label": "Rejection Processing "
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-09-09 17:34:06.658621",
+ "modified_by": "verma.adii03@gmail.com",
+ "module": "RPO",
+ "name": "Interview",
+ "owner": "verma.adii03@gmail.com",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

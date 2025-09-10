@@ -1,0 +1,64 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-09-09 16:03:21.165118",
+ "custom": 1,
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "interviewer_name",
+  "interviewer_type",
+  "email",
+  "designation",
+  "companyif_client"
+ ],
+ "fields": [
+  {
+   "fieldname": "interviewer_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Interviewer Name",
+   "options": "User"
+  },
+  {
+   "fieldname": "interviewer_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Interviewer Type",
+   "options": "Internal\nClient"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": " Email"
+  },
+  {
+   "fieldname": "designation",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": " Designation"
+  },
+  {
+   "fieldname": "companyif_client",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Company(If Client)"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-09-09 17:14:08.817560",
+ "modified_by": "verma.adii03@gmail.com",
+ "module": "RPO",
+ "name": "Interviewer",
+ "owner": "verma.adii03@gmail.com",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

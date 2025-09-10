@@ -1,0 +1,173 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-09-10 11:44:10.885579",
+ "custom": 1,
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_qpbd",
+  "amended_from",
+  "invoice_id",
+  "candidate_name",
+  "fee_structure_applied",
+  "invoice_status",
+  "column_break_zebf",
+  "client",
+  "position_filled",
+  "calculated_fee_amount",
+  "payment_received_date",
+  "column_break_sqck",
+  "invoice_date",
+  "joining_date",
+  "gst_amount",
+  "payment_method",
+  "column_break_qilb",
+  "due_date",
+  "ctccontract_value",
+  "inr",
+  "transaction_reference"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_qpbd",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Invoice",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "invoice_id",
+   "fieldtype": "Data",
+   "label": "Invoice Id",
+   "read_only": 1
+  },
+  {
+   "fieldname": "candidate_name",
+   "fieldtype": "Link",
+   "label": " Candidate Name",
+   "options": "RPO Job Applicant"
+  },
+  {
+   "fieldname": "fee_structure_applied",
+   "fieldtype": "Data",
+   "label": " Fee Structure Applied"
+  },
+  {
+   "fieldname": "invoice_status",
+   "fieldtype": "Select",
+   "label": " Invoice Status ",
+   "options": "Draft\nSent\nPaid\nOverdue\nCancelled"
+  },
+  {
+   "fieldname": "column_break_zebf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "client",
+   "fieldtype": "Link",
+   "label": "Client",
+   "options": "User"
+  },
+  {
+   "fieldname": "position_filled",
+   "fieldtype": "Data",
+   "label": " Position Filled"
+  },
+  {
+   "fieldname": "calculated_fee_amount",
+   "fieldtype": "Currency",
+   "label": " Calculated Fee Amount"
+  },
+  {
+   "fieldname": "payment_received_date",
+   "fieldtype": "Date",
+   "label": " Payment Received Date"
+  },
+  {
+   "fieldname": "column_break_sqck",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "invoice_date",
+   "fieldtype": "Date",
+   "label": "Invoice Date"
+  },
+  {
+   "fieldname": "joining_date",
+   "fieldtype": "Date",
+   "label": "Joining Date"
+  },
+  {
+   "fieldname": "gst_amount",
+   "fieldtype": "Currency",
+   "label": " GST Amount ",
+   "placeholder": "if applicable"
+  },
+  {
+   "fieldname": "payment_method",
+   "fieldtype": "Data",
+   "label": " Payment Method"
+  },
+  {
+   "fieldname": "column_break_qilb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "due_date",
+   "fieldtype": "Date",
+   "label": "Due Date"
+  },
+  {
+   "fieldname": "ctccontract_value",
+   "fieldtype": "Currency",
+   "label": " CTC/Contract Value",
+   "precision": "2"
+  },
+  {
+   "fieldname": "inr",
+   "fieldtype": "Currency",
+   "label": " Total Invoice Amoun"
+  },
+  {
+   "fieldname": "transaction_reference",
+   "fieldtype": "Data",
+   "label": " Transaction Reference"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-09-10 12:15:07.438612",
+ "modified_by": "verma.adii03@gmail.com",
+ "module": "RPO",
+ "name": "Invoice",
+ "owner": "verma.adii03@gmail.com",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

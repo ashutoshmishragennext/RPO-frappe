@@ -1,0 +1,311 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-09-10 10:41:34.440621",
+ "custom": 1,
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_vqss",
+  "amended_from",
+  "joining_id",
+  "candidate",
+  "job_offer",
+  "expected_joining_date",
+  "actual_joining_date",
+  "joining_status",
+  "no_show_reason",
+  "postponement_reason",
+  "new_joining_date",
+  "hr_contact_at_client",
+  "joining_location",
+  "first_day_schedule",
+  "documentation_status",
+  "employee_id",
+  "probation_end_date",
+  "document_checklist_tab",
+  "resume",
+  "educational_certificates",
+  "experience_certificates",
+  "identity_proof",
+  "address_proof",
+  "bank_details",
+  "pan_card",
+  "passportvisa",
+  "medical_reports",
+  "background_verification",
+  "post_joining_tracking_tab",
+  "day_1_confirmation",
+  "week_1_checkin_date",
+  "month_1_checkin_date",
+  "probation_review_date",
+  "exit_from_probation_date",
+  "replacement_required",
+  "guarantee_period",
+  "post_joining_support_tab",
+  "regular_checkins_scheduling",
+  "performance_tracking_during_probation",
+  "replacement_process",
+  "client_satisfaction_surveys"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_vqss",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Candidate Joining",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "joining_id",
+   "fieldtype": "Data",
+   "label": "Joining Id"
+  },
+  {
+   "fieldname": "candidate",
+   "fieldtype": "Link",
+   "label": "Candidate",
+   "options": "RPO Job Applicant"
+  },
+  {
+   "fieldname": "job_offer",
+   "fieldtype": "Link",
+   "label": "Job Offer",
+   "options": "Job Offer"
+  },
+  {
+   "fieldname": "expected_joining_date",
+   "fieldtype": "Date",
+   "label": "Expected Joining Date"
+  },
+  {
+   "fieldname": "actual_joining_date",
+   "fieldtype": "Date",
+   "label": "Actual Joining Date"
+  },
+  {
+   "fieldname": "joining_status",
+   "fieldtype": "Select",
+   "label": "Joining Status ",
+   "options": "Confirmed\nNo Show\nPostponed\nDeclined"
+  },
+  {
+   "fieldname": "no_show_reason",
+   "fieldtype": "Data",
+   "label": "No Show Reason",
+   "placeholder": "If Applicable"
+  },
+  {
+   "fieldname": "postponement_reason",
+   "fieldtype": "Data",
+   "label": "Postponement Reason ",
+   "placeholder": "If Postponed"
+  },
+  {
+   "fieldname": "new_joining_date",
+   "fieldtype": "Data",
+   "label": " New Joining Date",
+   "placeholder": "If postponed"
+  },
+  {
+   "fieldname": "hr_contact_at_client",
+   "fieldtype": "Data",
+   "label": " HR Contact at Client"
+  },
+  {
+   "fieldname": "joining_location",
+   "fieldtype": "Data",
+   "label": " Joining Location"
+  },
+  {
+   "fieldname": "first_day_schedule",
+   "fieldtype": "Data",
+   "label": "First Day Schedule"
+  },
+  {
+   "fieldname": "documentation_status",
+   "fieldtype": "Select",
+   "label": "Documentation Status"
+  },
+  {
+   "fieldname": "employee_id",
+   "fieldtype": "Data",
+   "label": " Employee ID",
+   "placeholder": "Assigned by Client"
+  },
+  {
+   "fieldname": "probation_end_date",
+   "fieldtype": "Date",
+   "label": "Probation End Date"
+  },
+  {
+   "fieldname": "document_checklist_tab",
+   "fieldtype": "Tab Break",
+   "label": "Document Checklist"
+  },
+  {
+   "default": "0",
+   "fieldname": "resume",
+   "fieldtype": "Check",
+   "label": "Resume"
+  },
+  {
+   "default": "0",
+   "fieldname": "educational_certificates",
+   "fieldtype": "Check",
+   "label": "Educational Certificates"
+  },
+  {
+   "default": "0",
+   "fieldname": "experience_certificates",
+   "fieldtype": "Check",
+   "label": "Experience Certificates"
+  },
+  {
+   "default": "0",
+   "fieldname": "identity_proof",
+   "fieldtype": "Check",
+   "label": "Identity Proof"
+  },
+  {
+   "default": "0",
+   "fieldname": "address_proof",
+   "fieldtype": "Check",
+   "label": "Address Proof"
+  },
+  {
+   "default": "0",
+   "fieldname": "bank_details",
+   "fieldtype": "Check",
+   "label": " Bank Details"
+  },
+  {
+   "default": "0",
+   "fieldname": "pan_card",
+   "fieldtype": "Check",
+   "label": " PAN Card "
+  },
+  {
+   "default": "0",
+   "fieldname": "passportvisa",
+   "fieldtype": "Check",
+   "label": " Passport/Visa"
+  },
+  {
+   "default": "0",
+   "fieldname": "medical_reports",
+   "fieldtype": "Check",
+   "label": " Medical Reports"
+  },
+  {
+   "default": "0",
+   "fieldname": "background_verification",
+   "fieldtype": "Check",
+   "label": " Background Verification "
+  },
+  {
+   "fieldname": "post_joining_tracking_tab",
+   "fieldtype": "Tab Break",
+   "label": " Post Joining Tracking"
+  },
+  {
+   "default": "0",
+   "fieldname": "day_1_confirmation",
+   "fieldtype": "Check",
+   "label": " Day 1 Confirmation"
+  },
+  {
+   "fieldname": "week_1_checkin_date",
+   "fieldtype": "Date",
+   "label": "Week 1 Checkin Date"
+  },
+  {
+   "fieldname": "month_1_checkin_date",
+   "fieldtype": "Date",
+   "label": " Month 1 Checkin Date"
+  },
+  {
+   "fieldname": "probation_review_date",
+   "fieldtype": "Date",
+   "label": " Probation Review Date"
+  },
+  {
+   "fieldname": "exit_from_probation_date",
+   "fieldtype": "Date",
+   "label": "Exit from Probation Date"
+  },
+  {
+   "default": "0",
+   "fieldname": "replacement_required",
+   "fieldtype": "Check",
+   "label": "Replacement Required"
+  },
+  {
+   "fieldname": "guarantee_period",
+   "fieldtype": "Data",
+   "label": " Guarantee Period ",
+   "placeholder": "In Months"
+  },
+  {
+   "fieldname": "post_joining_support_tab",
+   "fieldtype": "Tab Break",
+   "label": "Post Joining Support"
+  },
+  {
+   "fieldname": "regular_checkins_scheduling",
+   "fieldtype": "Data",
+   "label": " Regular checkins scheduling"
+  },
+  {
+   "fieldname": "performance_tracking_during_probation",
+   "fieldtype": "Data",
+   "label": "Performance tracking during probation"
+  },
+  {
+   "fieldname": "replacement_process",
+   "fieldtype": "Data",
+   "label": " Replacement process",
+   "placeholder": " if required"
+  },
+  {
+   "fieldname": "client_satisfaction_surveys",
+   "fieldtype": "Data",
+   "label": "Client satisfaction surveys"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-09-10 11:21:58.280841",
+ "modified_by": "verma.adii03@gmail.com",
+ "module": "RPO",
+ "name": "Candidate Joining",
+ "owner": "verma.adii03@gmail.com",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

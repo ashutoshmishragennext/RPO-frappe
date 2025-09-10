@@ -16,6 +16,7 @@
   "expected_hiring_volume",
   "timeline",
   "services_required",
+  "status",
   "column_break_xhff",
   "industry_type",
   "designation",
@@ -90,6 +91,16 @@
    "options": "Permanent Staffing\nContract Staffing\nExecutive Search"
   },
   {
+   "default": "Lead",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "no_copy": 1,
+   "options": "Lead\nOpen\nReplied\nOpportunity\nQuotation\nLost Quotation\nInterested\nConverted\nDo Not Contact",
+   "reqd": 1
+  },
+  {
    "fieldname": "column_break_xhff",
    "fieldtype": "Column Break"
   },
@@ -105,8 +116,9 @@
    "label": "Designation"
   },
   {
+   "default": "+91-",
    "fieldname": "phone_number",
-   "fieldtype": "Phone",
+   "fieldtype": "Data",
    "label": " Phone Number"
   },
   {
@@ -124,13 +136,14 @@
   {
    "fieldname": "budget_range",
    "fieldtype": "Currency",
-   "label": " Budget Range"
+   "label": " Budget(INR)"
   },
   {
    "fieldname": "assigned_to",
    "fieldtype": "Link",
    "label": "Assigned To",
-   "options": "User"
+   "options": "User",
+   "read_only": 1
   },
   {
    "fieldname": "priority_level",
@@ -180,7 +193,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-09-09 09:56:01.855717",
+ "modified": "2025-09-10 16:30:34.131527",
  "modified_by": "verma.adii03@gmail.com",
  "module": "RPO",
  "name": "Client",
@@ -204,5 +217,14 @@
  "row_format": "Dynamic",
  "sort_field": "creation",
  "sort_order": "DESC",
- "states": []
+ "states": [
+  {
+   "color": "Blue",
+   "title": "Lead"
+  },
+  {
+   "color": "Green",
+   "title": "Opportunity"
+  }
+ ]
 }

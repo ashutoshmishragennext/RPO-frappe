@@ -4,6 +4,19 @@
   "doctype": "Client Script",
   "dt": "Client",
   "enabled": 1,
+  "modified": "2025-09-10 16:36:30.897367",
+  "module": "RPO",
+  "name": "Create Opportunity Button in Client",
+  "script": "frappe.ui.form.on('Client', {\r\n    refresh: function(frm) {\r\n        if (!frm.is_new()) {\r\n            frm.add_custom_button(__('Convert to Opportunity'), function() {\r\n                // Open a new Opportunity Tracking doc with Client prefilled\r\n                frappe.new_doc('Opportunity Tracking', {\r\n                    client: frm.doc.name\r\n                });\r\n\r\n                // Update current Client status to \"Opportunity\"\r\n                frm.set_value('status', 'Opportunity');\r\n                frm.save();\r\n            });\r\n        }\r\n    }\r\n});\r\n",
+  "view": "Form"
+ }
+]
+[
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Client",
+  "enabled": 1,
   "modified": "2025-09-10 15:39:08.638408",
   "module": "RPO",
   "name": "Auto selected countr code",

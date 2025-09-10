@@ -10,21 +10,23 @@
  "engine": "InnoDB",
  "field_order": [
   "opportunity_name",
-  "client",
-  "opportunity_type",
   "stage",
-  "probability",
-  "expected_closing_date",
   "deal_value",
-  "services_required",
-  "territory",
   "sales_person",
-  "competitors",
-  "key_requirements",
   "proposal_status",
+  "amended_from",
+  "column_break_mmtm",
+  "client",
+  "probability",
+  "services_required",
+  "key_requirements",
   "contract_terms",
-  "lost_reason",
-  "amended_from"
+  "column_break_vebh",
+  "opportunity_type",
+  "expected_closing_date",
+  "territory",
+  "competitors",
+  "lost_reason"
  ],
  "fields": [
   {
@@ -35,22 +37,42 @@
    "reqd": 1
   },
   {
-   "fieldname": "client",
+   "fieldname": "stage",
+   "fieldtype": "Select",
+   "label": "Stage",
+   "options": "Prospecting\nProposal\nNegotiation\nClosed Won\nClosed Lost"
+  },
+  {
+   "fieldname": "deal_value",
+   "fieldtype": "Currency",
+   "label": " Deal Value"
+  },
+  {
+   "fieldname": "sales_person",
+   "fieldtype": "Link",
+   "label": "Sales Person ",
+   "options": "User"
+  },
+  {
+   "fieldname": "proposal_status",
+   "fieldtype": "Data",
+   "label": " Proposal Status"
+  },
+  {
+   "fieldname": "amended_from",
    "fieldtype": "Link",
    "label": "Client",
    "options": "Client"
   },
   {
-   "fieldname": "opportunity_type",
-   "fieldtype": "Select",
-   "label": "Opportunity Type",
-   "options": "New Business\nExisting Client\nUpsell"
+   "fieldname": "column_break_mmtm",
+   "fieldtype": "Column Break"
   },
   {
-   "fieldname": "stage",
-   "fieldtype": "Select",
-   "label": "Stage",
-   "options": "Prospecting\nProposal\nNegotiation\nClosed Won\nClosed Lost"
+   "fieldname": "client",
+   "fieldtype": "Link",
+   "label": "Client",
+   "options": "Client"
   },
   {
    "fieldname": "probability",
@@ -97,38 +119,48 @@
    "label": "Key Requirements"
   },
   {
-   "fieldname": "proposal_status",
-   "fieldtype": "Data",
-   "label": " Proposal Status"
-  },
-  {
    "fieldname": "contract_terms",
    "fieldtype": "Data",
    "label": "Contract Terms"
+  },
+  {
+   "fieldname": "column_break_vebh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "opportunity_type",
+   "fieldtype": "Select",
+   "label": "Opportunity Type",
+   "options": "New Business\nExisting Client\nUpsell"
+  },
+  {
+   "fieldname": "expected_closing_date",
+   "fieldtype": "Date",
+   "label": " Expected Closing Date"
+  },
+  {
+   "fieldname": "territory",
+   "fieldtype": "Data",
+   "label": " Territory"
+  },
+  {
+   "fieldname": "competitors",
+   "fieldtype": "Data",
+   "label": "Competitors"
   },
   {
    "fieldname": "lost_reason",
    "fieldtype": "Data",
    "label": "Lost Reason",
    "placeholder": "If Applicable"
-  },
-  {
-   "fieldname": "amended_from",
-   "fieldtype": "Link",
-   "label": "Amended From",
-   "no_copy": 1,
-   "options": "Opportunity Tracking",
-   "print_hide": 1,
-   "read_only": 1,
-   "search_index": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-09-10 16:40:20.839542",
- "modified_by": "ashutoshmishra8796@gmail.com",
+ "modified": "2025-09-10 17:17:11.042416",
+ "modified_by": "verma.adii03@gmail.com",
  "module": "RPO",
  "name": "Opportunity Tracking",
  "naming_rule": "Expression",

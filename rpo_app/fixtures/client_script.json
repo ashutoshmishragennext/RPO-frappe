@@ -2,16 +2,58 @@
  {
   "docstatus": 0,
   "doctype": "Client Script",
-  "dt": "Client",
+  "dt": "RPO Job Opening",
   "enabled": 1,
-  "modified": "2025-09-10 16:36:30.897367",
+  "modified": "2025-09-11 17:04:22.870223",
   "module": "RPO",
-  "name": "Create Opportunity Button in Client",
-  "script": "frappe.ui.form.on('Client', {\r\n    refresh: function(frm) {\r\n        if (!frm.is_new()) {\r\n            frm.add_custom_button(__('Convert to Opportunity'), function() {\r\n                // Open a new Opportunity Tracking doc with Client prefilled\r\n                frappe.new_doc('Opportunity Tracking', {\r\n                    client: frm.doc.name\r\n                });\r\n\r\n                // Update current Client status to \"Opportunity\"\r\n                frm.set_value('status', 'Opportunity');\r\n                frm.save();\r\n            });\r\n        }\r\n    }\r\n});\r\n",
+  "name": "Radio buttons for job opening",
+  "script": "// frappe.ui.form.on('RPO Job Opening', {\n\n//     refresh: function(frm) {\n//         // Convert Notice Period field to radio buttons\n//         convert_notice_period_to_radio(frm);\n//     }\n// });\n\n// function convert_notice_period_to_radio(frm) {\n//     let field = frm.get_field('notice_period_acceptable'); // Replace with your actual field name\n    \n//     if (field && field.$wrapper) {\n//         // Hide the original select dropdown\n//         field.$wrapper.find('.control-input').hide();\n\n//         field.$wrapper.find('select').hide();\n        \n//         // Remove existing radio buttons if any\n//         field.$wrapper.find('.notice-period-radio').remove();\n        \n//         // Create radio button HTML\n//         let radio_html = `\n//             <div class=\"notice-period-radio\">\n//                 <label style=\"cursor: pointer; font-weight: normal; display: flex; align-items: center;\">\n//                     <input type=\"radio\" name=\"notice_period_radio\" value=\"Yes\" \n//                           ${frm.doc.notice_period === 'Yes' ? 'checked' : ''} \n//                           style=\"margin-right: 8px; transform: scale(1.2);\">\n//                     <span ; font-weight: 500;\">YES</span>\n//                 </label>\n//                 <label style=\"cursor: pointer; font-weight: normal; display: flex; align-items: center;\">\n//                     <input type=\"radio\" name=\"notice_period_radio\" value=\"No\" \n//                           ${frm.doc.notice_period === 'No' ? 'checked' : ''} \n//                           style=\"margin-right: 8px; transform: scale(1.2);\">\n//                     <span style=\"color: #dc3545; font-weight: 500;\">NO</span>\n//                 </label>\n//             </div>\n//         `;\n        \n//         // Add radio buttons to the field wrapper\n//         field.$wrapper.append(radio_html);\n        \n//         // Handle radio button changes\n//         field.$wrapper.find('input[name=\"notice_period_radio\"]').change(function() {\n//             let selected_value = $(this).val();\n//             frm.set_value('notice_period_acceptable', selected_value);\n//         });\n//     }\n// }\n\n\n\nfrappe.ui.form.on('RPO Job Opening', {\n    refresh: function(frm) {\n        convert_notice_period_inline(frm);\n                restore_radio_selection(frm);\n\n    }\n});\n\nfunction convert_notice_period_inline(frm) {\n    let field = frm.get_field('notice_period_acceptable');\n    \n    if (field && field.$wrapper) {\n        // Hide all select-related elements\n        field.$wrapper.find('select, .control-input, .control-input-wrapper').hide();\n        \n        // Remove existing custom elements\n        field.$wrapper.find('.custom-radio-inline').remove();\n        \n        // Get the original label\n        let label_text = field.$wrapper.find('.control-label').text().trim();\n        \n        // Create inline radio layout\n        let inline_html = `\n            <div class=\"custom-radio-inline\">\n                <div class=\"form-group\" style=\"margin-bottom: 15px;\">\n                    <div style=\"display: flex; justify-content: space-between; align-items: center; min-height: 36px;\">\n                        <label class=\"control-label\" style=\"margin: 0; font-weight: 500; color: #555;\">\n                            ${label_text}\n                        </label>\n                        <div class=\"radio-buttons-right\" style=\"display: flex; gap: 20px;\">\n                            <label class=\"radio-option-inline\" style=\"cursor: pointer; display: flex; align-items: center; margin: 0; font-weight: normal;\">\n                                <input type=\"radio\" name=\"notice_period_inline\" value=\"Yes\" \n                                       ${frm.doc.notice_period === 'YES' ? 'checked' : ''} \n                                       style=\"margin-right: 8px; transform: scale(1.3);\">\n                                <span style=\"font-weight: 600; font-size: 14px;\">YES</span>\n                            </label>\n                            <label class=\"radio-option-inline\" style=\"cursor: pointer; display: flex; align-items: center; margin: 0; font-weight: normal;\">\n                                <input type=\"radio\" name=\"notice_period_inline\" value=\"No\" \n                                       ${frm.doc.notice_period === 'NO' ? 'checked' : ''} \n                                       style=\"margin-right: 8px; transform: scale(1.3);\">\n                                <span style=\"font-weight: 600; font-size: 14px;\">NO</span>\n                            </label>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        `;\n        \n        // Hide original label and replace with custom layout\n        field.$wrapper.find('.control-label').hide();\n        field.$wrapper.prepend(inline_html);\n        \n        // Handle radio changes\n        field.$wrapper.find('input[name=\"notice_period_inline\"]').change(function() {\n            let value = $(this).val();\n            frm.set_value('notice_period_acceptable', value);\n        });\n        \n        // Add styling\n        add_inline_radio_styles();\n    }\n}\n\nfunction add_inline_radio_styles() {\n    if (!$('#inline-radio-styles').length) {\n        $('head').append(`\n            <style id=\"inline-radio-styles\">\n                .custom-radio-inline {\n                    width: 100%;\n                }\n                \n                .custom-radio-inline .form-group {\n                    // border-bottom: 1px solid #d1d8dd;\n                    padding: 8px 0;\n                }\n                \n                .radio-option-inline:hover {\n                    opacity: 0.8;\n                    transition: opacity 0.2s;\n                }\n                \n                .radio-option-inline input[type=\"radio\"] {\n                    accent-color: #007bff;\n                }\n                \n                /* Ensure no dropdown elements show */\n                .custom-radio-inline ~ .control-input,\n                .custom-radio-inline ~ .control-input-wrapper {\n                    display: none !important;\n                }\n            </style>\n        `);\n    }\n}",
   "view": "Form"
  },
-
-
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Client",
+  "enabled": 1,
+  "modified": "2025-09-11 17:27:11.553523",
+  "module": "RPO",
+  "name": "aut modified date",
+  "script": "frappe.ui.form.on('Client', {\r\n    refresh: function(frm) {\r\n        // Form load hone par modified_date set karein\r\n        if(!frm.doc.__islocal) { // Only for existing records\r\n            frm.set_value('modified_date', frappe.datetime.now_datetime());\r\n        }\r\n    },\r\n    \r\n    before_save: function(frm) {\r\n        // Save se pehle current time set karein\r\n        frm.set_value('modified_date', frappe.datetime.now_datetime());\r\n    }\r\n});",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "RPO Job Opening",
+  "enabled": 1,
+  "modified": "2025-09-11 17:46:27.846329",
+  "module": "RPO",
+  "name": "Yrs in end in job opening",
+  "script": "frappe.ui.form.on('RPO Job Opening', {\r\n    refresh: function(frm) {\r\n        // Inject CSS directly\r\n        const css = `\r\n            [data-fieldname=\"maximum_experience\"] input {\r\n                padding-right: 50px !important;\r\n                background-image: url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"40\" height=\"20\"><text x=\"5\" y=\"14\" fill=\"%238D99A6\" font-size=\"12\">YRS</text></svg>');\r\n                background-repeat: no-repeat;\r\n                background-position: right 8px center;\r\n            }\r\n        `;\r\n        \r\n        $('<style>').text(css).appendTo('head');\r\n    }\r\n});",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Client",
+  "enabled": 1,
+  "modified": "2025-09-11 18:17:04.736542",
+  "module": "RPO",
+  "name": "referral field hidden",
+  "script": "frappe.ui.form.on(\"Client\", {\r\n    refresh: function(frm) {\r\n        // run once on form load\r\n        frm.toggle_display(\"reference\", frm.doc.source === \"Referral\");\r\n    },\r\n\r\n    source: function(frm) {\r\n        // whenever source field changes\r\n        frm.toggle_display(\"reference\", frm.doc.source === \"Referral\");\r\n    }\r\n});\r\n",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Client",
+  "enabled": 1,
+  "modified": "2025-09-12 11:38:52.377184",
+  "module": "RPO",
+  "name": "Create Opportunity Button in Client",
+  "script": "frappe.ui.form.on('Client', {\r\n    refresh: function(frm) {\r\n        if (!frm.is_new()) {\r\n            frm.add_custom_button(__('Convert to Opportunity'), function() {\r\n                // Open a new Opportunity Tracking doc with Client prefilled\r\n                frappe.new_doc('Opportunity Tracking', {\r\n                    client: frm.doc.name\r\n                });\r\n\r\n                // Update current Client status to \"Opportunity\"\r\n              \r\n            \r\n            });\r\n        }\r\n    }\r\n});\r\n",
+  "view": "Form"
+ },
  {
   "docstatus": 0,
   "doctype": "Client Script",
@@ -32,6 +74,17 @@
   "module": "RPO",
   "name": "Convert Opportunity to job type",
   "script": "frappe.ui.form.on('Opportunity Tracking', {\r\n    refresh: function(frm) {\r\n        if (!frm.is_new()) {\r\n            frm.add_custom_button(__('Create Job Opening'), function() {\r\n                frappe.new_doc('RPO Job Opening', {\r\n                opportunity: frm.doc.name  // or use frm.doc.name if that's the Lead ID\r\n                });\r\n            });\r\n        }\r\n    }\r\n});",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Candidate Assessment",
+  "enabled": 1,
+  "modified": "2025-09-12 16:26:16.215773",
+  "module": "RPO",
+  "name": "interview button in candidate assessment",
+  "script": "frappe.listview_settings[\"Candidate Assessment\"] = {\r\n    onload(listview) {\r\n        listview.page.add_button(__('Create Interview'), () => {\r\n            let selected = listview.get_checked_items();\r\n\r\n            if (!selected.length) {\r\n                frappe.msgprint(__('Please select at least one record.'));\r\n                return;\r\n            }\r\n\r\n            // Har ek Candidate Assessment ke liye Interview record banao\r\n            selected.forEach(row => {\r\n                frappe.call({\r\n                    method: \"frappe.client.insert\",\r\n                    args: {\r\n                        doc: {\r\n                            doctype: \"Interview\",\r\n                            candidate_assessment: row.name,   // link field\r\n                            interview_date: frappe.datetime.now_datetime()\r\n                        }\r\n                    },\r\n                    callback: function(r) {\r\n                        if (!r.exc) {\r\n                            frappe.show_alert({\r\n                                message: __('Interview created for ' + row.name),\r\n                                indicator: 'green'\r\n                            });\r\n                        }\r\n                    }\r\n                });\r\n            });\r\n        });\r\n    }\r\n};\r\n",
   "view": "Form"
  }
 ]

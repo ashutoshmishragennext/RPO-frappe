@@ -14,18 +14,19 @@
   "alternate_phone",
   "marital_status",
   "nationality",
+  "status",
   "column_break_juqg",
   "email_id",
   "date_of_birth",
   "location",
   "job_id",
   "application_source",
-  "current_address",
   "column_break_smcf",
   "phone_number",
   "gender",
   "preferred_location",
   "permanent_address",
+  "current_address",
   "professional_information_tab",
   "experiences_section",
   "previous_experiences",
@@ -56,7 +57,7 @@
    "fieldtype": "Link",
    "label": "Amended From",
    "no_copy": 1,
-   "options": "RPO Job Applicant",
+   "options": "Job Applicant",
    "print_hide": 1,
    "read_only": 1,
    "search_index": 1
@@ -84,6 +85,13 @@
    "label": " Nationality"
   },
   {
+   "default": "Job Applicant",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "staus",
+   "options": "Job Applicant\nAssessment\nInterview\nRejected\nJob Offer"
+  },
+  {
    "fieldname": "column_break_juqg",
    "fieldtype": "Column Break"
   },
@@ -109,18 +117,13 @@
    "fieldname": "job_id",
    "fieldtype": "Link",
    "label": "Job Id",
-   "options": "RPO Job Opening",
+   "options": "Job Opening",
    "reqd": 1
   },
   {
    "fieldname": "application_source",
    "fieldtype": "Data",
    "label": "Application Source "
-  },
-  {
-   "fieldname": "current_address",
-   "fieldtype": "Data",
-   "label": " Current Address"
   },
   {
    "fieldname": "column_break_smcf",
@@ -146,6 +149,11 @@
    "fieldname": "permanent_address",
    "fieldtype": "Data",
    "label": " Permanent Address"
+  },
+  {
+   "fieldname": "current_address",
+   "fieldtype": "Data",
+   "label": " Current Address"
   },
   {
    "fieldname": "professional_information_tab",
@@ -224,12 +232,11 @@
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
- "is_submittable": 1,
  "links": [],
- "modified": "2025-09-12 13:01:38.327593",
+ "modified": "2025-09-13 09:40:43.335922",
  "modified_by": "verma.adii03@gmail.com",
  "module": "RPO",
- "name": "RPO Job Applicant",
+ "name": "Job Applicant",
  "naming_rule": "Expression",
  "owner": "verma.adii03@gmail.com",
  "permissions": [
@@ -243,7 +250,6 @@
    "report": 1,
    "role": "System Manager",
    "share": 1,
-   "submit": 1,
    "write": 1
   }
  ],

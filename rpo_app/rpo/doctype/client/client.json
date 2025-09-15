@@ -191,9 +191,8 @@
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
- "is_submittable": 1,
  "links": [],
- "modified": "2025-09-10 16:30:34.131527",
+ "modified": "2025-09-12 11:25:20.468721",
  "modified_by": "verma.adii03@gmail.com",
  "module": "RPO",
  "name": "Client",
@@ -210,11 +209,11 @@
    "report": 1,
    "role": "System Manager",
    "share": 1,
-   "submit": 1,
    "write": 1
   }
  ],
  "row_format": "Dynamic",
+ "search_fields": "company_name,status",
  "sort_field": "creation",
  "sort_order": "DESC",
  "states": [

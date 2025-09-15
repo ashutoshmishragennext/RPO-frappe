@@ -11,10 +11,8 @@
  "field_order": [
   "opportunity_name",
   "stage",
-  "deal_value",
-  "sales_person",
   "proposal_status",
-  "amended_from",
+  "status",
   "column_break_mmtm",
   "client",
   "probability",
@@ -26,7 +24,10 @@
   "expected_closing_date",
   "territory",
   "competitors",
-  "lost_reason"
+  "lost_reason",
+  "deal_value",
+  "sales_person",
+  "amended_from"
  ],
  "fields": [
   {
@@ -43,26 +44,15 @@
    "options": "Prospecting\nProposal\nNegotiation\nClosed Won\nClosed Lost"
   },
   {
-   "fieldname": "deal_value",
-   "fieldtype": "Currency",
-   "label": " Deal Value"
-  },
-  {
-   "fieldname": "sales_person",
-   "fieldtype": "Link",
-   "label": "Sales Person ",
-   "options": "User"
-  },
-  {
    "fieldname": "proposal_status",
    "fieldtype": "Data",
    "label": " Proposal Status"
   },
   {
-   "fieldname": "amended_from",
-   "fieldtype": "Link",
-   "label": "Client",
-   "options": "Client"
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Opportunity\nJob Op Created\nJob Applicant\nJob Application"
   },
   {
    "fieldname": "column_break_mmtm",
@@ -80,38 +70,10 @@
    "label": "Probability"
   },
   {
-   "fetch_from": "client.timeline",
-   "fieldname": "expected_closing_date",
-   "fieldtype": "Date",
-   "label": " Expected Closing Date"
-  },
-  {
-   "fieldname": "deal_value",
-   "fieldtype": "Currency",
-   "label": " Deal Value"
-  },
-  {
    "fieldname": "services_required",
    "fieldtype": "Select",
    "label": " Services Required",
    "options": "Table with Service Type\nQuantity\nRate"
-  },
-  {
-   "fieldname": "territory",
-   "fieldtype": "Data",
-   "label": " Territory"
-  },
-  {
-   "fetch_from": "client.assigned_to",
-   "fieldname": "sales_person",
-   "fieldtype": "Link",
-   "label": "Sales Person ",
-   "options": "User"
-  },
-  {
-   "fieldname": "competitors",
-   "fieldtype": "Data",
-   "label": "Competitors"
   },
   {
    "fieldname": "key_requirements",
@@ -134,6 +96,7 @@
    "options": "New Business\nExisting Client\nUpsell"
   },
   {
+   "fetch_from": "client.timeline",
    "fieldname": "expected_closing_date",
    "fieldtype": "Date",
    "label": " Expected Closing Date"
@@ -153,13 +116,33 @@
    "fieldtype": "Data",
    "label": "Lost Reason",
    "placeholder": "If Applicable"
+  },
+  {
+   "fieldname": "deal_value",
+   "fieldtype": "Currency",
+   "label": " Deal Value"
+  },
+  {
+   "fieldname": "sales_person",
+   "fieldtype": "Link",
+   "label": "Sales Person ",
+   "options": "User"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Opportunity Tracking",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
- "is_submittable": 1,
  "links": [],
- "modified": "2025-09-10 17:17:11.042416",
+ "modified": "2025-09-12 12:05:23.048654",
  "modified_by": "verma.adii03@gmail.com",
  "module": "RPO",
  "name": "Opportunity Tracking",
@@ -182,6 +165,15 @@
  "row_format": "Dynamic",
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": [],
+ "states": [
+  {
+   "color": "Yellow",
+   "title": "Opportunity"
+  },
+  {
+   "color": "Green",
+   "title": "Job Op Created"
+  }
+ ],
  "track_changes": 1
 }

@@ -72,7 +72,7 @@
    "fieldname": "candidate",
    "fieldtype": "Link",
    "label": "Candidate",
-   "options": "RPO Job Applicant"
+   "options": "Job Applicant"
   },
   {
    "fieldname": "job_offer",
@@ -284,7 +284,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-09-10 15:08:56.956108",
+ "modified": "2025-09-12 10:40:48.970878",
  "modified_by": "Administrator",
  "module": "RPO",
  "name": "Candidate Joining",

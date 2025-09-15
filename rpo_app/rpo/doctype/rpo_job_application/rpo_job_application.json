@@ -45,13 +45,13 @@
    "fieldname": "candidate",
    "fieldtype": "Link",
    "label": "Candidate",
-   "options": "RPO Job Applicant"
+   "options": "Job Applicant"
   },
   {
    "fieldname": "job_opening",
    "fieldtype": "Link",
    "label": "Job Opening",
-   "options": "RPO Job Opening"
+   "options": "Job Opening"
   },
   {
    "fieldname": "application_date",
@@ -100,7 +100,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-09-10 12:40:08.633174",
+ "modified": "2025-09-12 10:40:49.062694",
  "modified_by": "Administrator",
  "module": "RPO",
  "name": "RPO Job Application",

@@ -19,7 +19,9 @@ fixtures = [
         "filters": [["module", "=", "RPO"]]
     },
      
-    "Server Script"
+    "Server Script",
+    "Custom Field",
+    "Property Setter"
 ]
 # add_to_apps_screen = [
 # 	{
